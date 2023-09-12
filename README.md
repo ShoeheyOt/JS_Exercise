@@ -1,3 +1,4 @@
 # This is Exercise for JS Youtube vide
 
- <https://www.youtube.com/watch?v=SBmSRK3feww&t=901s>
+<[JS exercise video]>
+[JS exercise video]: ttps://www.youtube.com/watch?v=SBmSRK3feww&t=901
