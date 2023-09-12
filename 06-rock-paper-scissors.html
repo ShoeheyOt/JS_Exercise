@@ -20,6 +20,10 @@
       const randomNumber2 = Math.random();
       if (randomNumber2 >= 0 && randomNumber2 > 1 / 3) {
         console.log('rock');
+      } else if (randomNumber2 >= 1 / 3 && randomNumber2 < 2 / 3) {
+        console.log('paper');
+      } else {
+        console.log('scissors');
       }
     ">Paper</button>
     <button>Scissors</button>
