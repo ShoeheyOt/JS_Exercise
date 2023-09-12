@@ -18,7 +18,7 @@
 
     <button onclick="
       const randomNumber2 = Math.random();
-      if (randomNumber2 >= 0 && randomNumber2 > 1 / 3) {
+      if (randomNumber2 >= 0 && randomNumber2 < 1 / 3) {
         console.log('rock');
       } else if (randomNumber2 >= 1 / 3 && randomNumber2 < 2 / 3) {
         console.log('paper');
@@ -27,16 +27,14 @@
       }
     ">Paper</button>
     <button onclick="
-      const randomNumber3 = Math.round();
-      if (randomNumber3 >= 0 && randomNumber3 > 1 / 3) {
+      const randomNumber3 = Math.random();
+      if (randomNumber3 >= 0 && randomNumber3 < 1 / 3) {
         console.log('rock');
       } else if(randomNumber3 >= 1 / 3 && randomNumber3 < 2 / 3) {
         console.log('paper');
       } else {
         console.log('scissors');
-      }
-    
-    
+      }   
     ">Scissors</button>
 
      <script>
