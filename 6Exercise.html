@@ -6,9 +6,126 @@
   <title>6Exercise</title>
 </head>
 <body>
+  <h3>Age?</h3>
+  <p>
+    <button onclick="
+      register += '1';
+      console.log(register);
+    ">1</button>
+
+    <button onclick="
+      register += '2';
+      console.log(register);
+    ">2</button>
+
+    <button onclick="
+      register += '3';
+      console.log(register);
+    ">3</button>
+  </p>
+  <p>
+    <button onclick="
+      register += '4';
+      console.log(register);
+      ">4</button>
+
+    <button onclick="
+    register += '5';
+    console.log(tegister);
+    ">5</button>
+
+    <button onclick="
+    register += '6';
+    console.log(register);
+    ">6</button>
+
+  </p>
+
+  <p>
+    <button onclick="
+      register += '7';
+      console.log(register);
+      ">7</button>
+
+    <button onclick="
+    register += '8'
+    console.log(register);
+    ">8</button>
+    
+    <button onclick="
+    register += '9';
+    console.log(register);
+    ">9</button>
+  </p>
+  
+  <h3>Day?</h3>
+
+  <p>
+    <button onclick="
+      day = 'Monday';
+      console.log(day);
+    ">Mon.</button>
+    
+    <button onclick="
+      day = 'Tuesday';
+      console.log(day);
+    ">Tue.</button>
+    
+    <button onclick="
+      day = 'Wednesday';
+      console.log(day);    
+    ">Wed.</button>
+
+    <button onclick="
+      day = 'Thursday';
+      console.log(day);    
+    ">Thu.</button>
+
+    <button onclick="
+      day = 'Friday';
+      console.log(day);
+    ">Fri.</button>
+
+    <button onclick="
+      day = 'Saturday';
+      console.log(day);
+    ">Sat.</button>
+    
+    <button onclick="
+      day = 'Sunday';
+      console.log(day);   
+    ">Sun.</button>
+  </p>
+  <p>
+    <button onclick="
+    if((register <= 6 || register >= 65) && (day === 'Saturday' || day === 'Sunday') && register !== '' && day !== !'') {
+      result = 'Discount. Congrats!';
+      console.log(result);
+      alert(`Your age is ${register} and Today is ${day}. You will get ${result}`);
+    } else if ( register === '' || day === '') {
+      register = ''; 
+      day = '';
+      console.log('Please chose your age and day');
+      alert('Please chose age and day.');
+    } else {
+      result = 'no Discount';
+      console.log('no Discount');
+      alert(`Your age is ${register} and Today is ${day}. You will get ${result}`);
+    }
+      register = '';
+      day = '';
+      ">Enter</button>
+
+      <button onclick="
+      register = '';
+      day = '';
+      console.log('Cleared!');
+      ">Clear</button>
+  </p>
+  
 
   <script>
-    // 6a-6c
+    /* Only practice 6a-6c
     const hour = 8;
     let message = '';
     const name = 'Simon';
@@ -32,8 +149,14 @@
       console.log('Discount');
     } else{console.log('No discount')};
     
-     
-    
+    //6d-6e
+   */ 
+   let register ='';
+   let day ='';
+   let result ='';
+   answer = document.getElementById("answer");
+
+
   </script>
 </body>
 </html>
