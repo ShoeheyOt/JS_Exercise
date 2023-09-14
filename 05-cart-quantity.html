@@ -7,39 +7,36 @@
     <button onClick="
       console.log(`Cart quantity: ${cartQuantity}`);    
     ">Show Quantity</button>
+    
     <button onClick="
-      cartQuantity++;
-      console.log(`Cart quantity: ${cartQuantity}`);
+      (cartQuantity + 1) <= 10 ? (cartQuantity++ , console.log(`Cart quantity: ${cartQuantity}`)) : alert('Cart is full!');
     ">Add to Cart</button>
-
+    
     <button onClick="
-      cartQuantity += 2;
-      console.log(`Cart quantity: ${cartQuantity}`);
+      (cartQuantity + 2) <= 10 ? (cartQuantity +=2, console.log(`Cart quantity: ${cartQuantity}`)) : alert('Cart is full!');
     ">+2</button>
 
     <button onClick="
-      cartQuantity = cartQuantity + 3;
-      console.log(`Cart quantity: ${cartQuantity}`);
+      (cartQuantity + 3) <= 10 ? (cartQuantity +=3, console.log(`Cart quantity: ${cartQuantity}`)) : alert('Cart is full!');
     ">+3</button>
+    
     <button onclick="
-      cartQuantity += 4;
-      console.log (`Cart quantity: ${cartQuantity}`);
+      (cartQuantity + 4) <= 10 ? (cartQuantity +=4, console.log(`Cart quantity: ${cartQuantity}`)) : alert('Cart is full!');
     ">+4</button>
+    
     <button onclick="
-      cartQuantity += 5;
-      console.log(`Cart quantity: ${cartQuantity}`);
+      (cartQuantity + 5) <= 10 ? (cartQuantity +=5, console.log(`Cart quantity: ${cartQuantity}`)) : alert('Cart is full!');
     ">+5</button>
+
     <button onClick="
-      cartQuantity --;
-      console.log(`Cart quantity: ${cartQuantity}`);
+      (cartQuantity - 1) >= 0 ? (cartQuantity --, console.log(`Cart quantity: ${cartQuantity}`)) : alert('Not enough items in the cart'); 
     ">Remove from cart</button>
+    
     <button onclick="
-      cartQuantity -= 2;
-      console.log(`Cart quantity: ${cartQuantity}`);
+      (cartQuantity - 2) >= 0 ? (cartQuantity -=2, console.log(`Cart quantity: ${cartQuantity}`)) : alert('Not enough items in the cart');
     ">-2</button>
     <button onclick="
-      cartQuantity -= 3;
-      console.log(`Cart quantity: ${cartQuantity}`);
+      (cartQuantity - 3) >=0 ? (cartQuantity -=3, console.log(`Cart quantity: ${cartQuantity}`)) : alert('Not enough items in the cart');
     ">-3</button>
     <button onClick="
       cartQuantity = cartQuantity - cartQuantity;
