@@ -63,11 +63,11 @@
           } else {
             resultProvider(playerMove, computerMove, Result.Lose);
           }
-        // paper
-        // win: rock
-        // lose: scissors
+        // scissors
+        // win: paper
+        // lose:rock
         } else {
-          if (computerMove === Move.Rock) {
+          if (computerMove === Move.Paper) {
             resultProvider(playerMove, computerMove, Result.Win);
           } else {
             resultProvider(playerMove, computerMove, Result.Lose);
