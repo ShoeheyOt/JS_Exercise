@@ -18,49 +18,74 @@
     ">Scissors</button>
 
      <script>
-        function playGame(playerMove){
-          const computerMove = pickComputerMove();
-          if (playerMove === 'scissors') {
-            if(computerMove === 'rock') {
-              result = 'You lose.';
-              } else if(computerMove === 'paper') {
-                result = 'You win!';
-              } else if (computerMove === 'scissors') {
-                result = 'Tie.';
-            } 
-          } else if (playerMove === 'paper') {
-              if (computerMove === 'rock') {
-                result = 'You win!';
-              } else if(computerMove === 'paper') {
-                result = 'Tie.';
-              } else {
-                 result = 'You lose.';
-              }
-          } else if (playerMove === 'rock') {
-              if (computerMove === 'rock') {
-                result = 'Tie.';
-              } else if (computerMove === 'paper') {
-                result = 'You lose.';
-              } else {
-                result = 'You win!';
-              }
-           }
+
+      const Result = {
+        Win: "You win!",
+        Lose: "You lose.",
+        Tie: "Tie."
+      }
+
+      const Move = {
+        Rock: "rock",
+        Paper: "paper",
+        Scissors: "scissors"
+      }
+
+      function resultProvider(playerMove, computerMove, result) {
           alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result}`);
+      }
+
+      function playGame(playerMove) {
+
+        const computerMove = pickComputerMove();
+
+        // tie
+        if (playerMove === computerMove) {
+          resultProvider(playerMove, computerMove, Result.Tie)
+          return;
+        };
+
+        // rock
+        // win: scissors
+        // lose: paper
+        if (playerMove === Move.Rock) {
+          if (computerMove === Move.Scissors) {
+            resultProvider(playerMove, computerMove, Result.Win);
+          } else {
+            resultProvider(playerMove, computerMove, Result.Lose);
+          }
+        // paper
+        // win: rock
+        // lose: scissors
+        } else if (playerMove === Move.Paper) {
+          if (computerMove === Move.Rock) {
+            resultProvider(playerMove, computerMove, Result.Win);
+          } else {
+            resultProvider(playerMove, computerMove, Result.Lose);
+          }
+        // scissors
+        // win: paper
+        // lose:rock
+        } else {
+          if (computerMove === Move.Paper) {
+            resultProvider(playerMove, computerMove, Result.Win);
+          } else {
+            resultProvider(playerMove, computerMove, Result.Lose);
+          }
         }
-        let result = '';
+
+      }
+
       function pickComputerMove() {
        const randomNumber = Math.random();
 
-       let computerMove = '';
-
         if (randomNumber >= 0 && randomNumber < 1 / 3) {
-          computerMove = 'rock';
+          return Move.Rock;
         } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
-          computerMove = 'paper';
+          return Move.Paper;
         } else {
-          computerMove = 'scissors';
+          return Move.Scissors;
         }
-        return computerMove;
       }
     </script>
   </body>
