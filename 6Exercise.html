@@ -6,6 +6,9 @@
   <title>6Exercise</title>
 </head>
 <body>
+  <p>
+    Less than 6 years old or older than 65 years old, and if holiday => get discount!
+  </p>
   <h3>Age?</h3>
   <p>
     <button onclick="
@@ -31,7 +34,7 @@
 
     <button onclick="
     register += '5';
-    console.log(tegister);
+    console.log(register);
     ">5</button>
 
     <button onclick="
@@ -156,7 +159,7 @@
    let register ='';
    let day ='';
    let result ='';
-   document.getElementById('ageResult').textContent = `Your age is ${register}`;
+   document.getElementById('ageResult').innerHTML = `Your age is ${register}`;
 
 
   </script>

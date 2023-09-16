@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6Exercise_f-j</title>
+</head>
+
+<body>
+  <p>Flip Game</p>
+
+  
+<button onclick="
+let HorT = Math.random();
+HorT > 1 / 2 ? alert(`It's Heads! You Win!`) : alert (`It's Tails.You lose...`)
+">Heads</button>
+
+<button onClick="
+let TorH = Math.random();
+if(TorH > 1 / 2) {
+  alert(`It's Heads. You loose...`);
+} else {
+  alert (`It's Tails! You win!`);
+}
+">Tails</button>
+
+  <script>
+  let randomNumber = Math.random ();
+  let result ='';
+  let guess ='Heads';
+  console.log(randomNumber);
+
+  randomNumber > 1 / 2 ? result = 'Heads' : result = 'Tails'
+
+  if (guess === result) {
+    console.log('You win!');
+  } else {
+    console.log('You lose...');
+  }
+  
+  </script>
+</body>
+</html>
